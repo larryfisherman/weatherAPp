@@ -1,0 +1,57 @@
+.additionalInfo {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    flex-wrap: wrap;
+    width: 50%;
+    height: 30%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .additionalInfo .maxTemp {
+    width: 26%;
+    height: 30%;
+    border-right: 1px solid grey;
+    line-height: 75px;
+    text-align: center;
+  }
+  
+  .additionalInfo .wind {
+    width: 26%;
+    height: 30%;
+    border-right: 1px solid grey;
+    line-height: 75px;
+    text-align: center;
+  }
+  
+  .additionalInfo .sunrise {
+    width: 26%;
+    height: 30%;
+    line-height: 75px;
+    text-align: center;
+  }
+  
+  .additionalInfo .lowestTemp {
+    width: 26%;
+    height: 30%;
+    border-right: 1px solid grey;
+    line-height: 75px;
+    text-align: center;
+  }
+  
+  .additionalInfo .rain {
+    width: 26%;
+    height: 30%;
+    border-right: 1px solid grey;
+    line-height: 75px;
+    text-align: center;
+  }
+  
+  .additionalInfo .sunset {
+    width: 26%;
+    height: 30%;
+    line-height: 75px;
+    text-align: center;
+  }
+  
+  

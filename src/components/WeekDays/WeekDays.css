@@ -1,0 +1,65 @@
+.weekDays {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 30%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .weekDays .monday {
+    width: 13%;
+    height: 70%;
+    border-right: 1px solid grey;
+    text-align: center;
+    line-height: 175px;
+  }
+  
+  .weekDays .tuesday {
+    width: 13%;
+    height: 70%;
+    border-right: 1px solid grey;
+    text-align: center;
+    line-height: 175px;
+  }
+  
+  .weekDays .wednesday {
+    width: 13%;
+    height: 70%;
+    border-right: 1px solid grey;
+    text-align: center;
+    line-height: 175px;
+  }
+  
+  .weekDays .thursday {
+    width: 13%;
+    height: 70%;
+    border-right: 1px solid grey;
+    text-align: center;
+    line-height: 175px;
+  }
+  
+  
+  .weekDays .friday {
+    width: 13%;
+    height: 70%;
+    border-right: 1px solid grey;
+    text-align: center;
+    line-height: 175px;
+  }
+  
+  
+  .weekDays .saturday {
+    width: 13%;
+    height: 70%;
+    border-right: 1px solid grey;
+    text-align: center;
+    line-height: 175px;
+  }
+  
+  .weekDays .sunday {
+    width: 13%;
+    height: 70%;
+    text-align: center;
+    line-height: 175px;
+  }

@@ -1,0 +1,83 @@
+input.unActive {
+  display: flex;
+  position: absolute;
+  top: 35%;
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  border-radius: 16px 16px 16px 16px;
+  transition: all 1.5s linear,
+  scaleInput 2s linear;
+  transform: scale(1);
+}
+
+input.Active {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+  border-radius: 0 0 16px 16px;
+  transition: all 1.5s linear,
+  scaleInput 2s linear;
+  transform: scale(1);
+  
+  
+}
+  input:focus {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  @keyframes scaleInput {
+    0% {
+      transform: scale(1);
+    }
+
+    25% {
+      
+      transform: scale(0.9)
+    }
+
+    50% {
+      transform: scale(0.5);
+    }
+
+    75% {
+      transform:scale(0.8)
+    }
+
+    100% {
+      transform: scale(1);
+      
+
+    }
+  }
+
+  @keyframes move {
+    0% {
+      top: 35%;
+    }
+
+    50% {
+      top: 15%;
+    }
+
+    100% {
+      top: 0%;
+    }
+  }
