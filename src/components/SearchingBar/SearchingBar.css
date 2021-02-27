@@ -13,9 +13,7 @@ input.unActive {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
   border-radius: 16px 16px 16px 16px;
-  transition: all 1.5s linear,
-  scaleInput 2s linear;
-  transform: scale(1);
+  
 }
 
 input.Active {
@@ -33,14 +31,15 @@ input.Active {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
   border-radius: 0 0 16px 16px;
-  transition: all 1.5s linear,
-  scaleInput 2s linear;
-  transform: scale(1);
-  
-  
+  transition: all 1s ease,
+  scaleInput 2s ease;  
 }
   input:focus {
     background-color: rgba(255, 255, 255, 1);
+  }
+
+  p {
+    line-height: 35px;
   }
 
   @keyframes scaleInput {
@@ -50,15 +49,15 @@ input.Active {
 
     25% {
       
-      transform: scale(0.9)
+      transform: scale(0.6)
     }
 
     50% {
-      transform: scale(0.5);
+      transform: scale(0.3);
     }
 
     75% {
-      transform:scale(0.8)
+      transform:scale(0.6)
     }
 
     100% {

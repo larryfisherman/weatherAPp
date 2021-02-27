@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -15,7 +16,6 @@ body {
   height: 100vh;
   width: 100%;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .activeHeader {
@@ -27,10 +27,13 @@ body {
 }
 
 h1.active {
-  display: flex;
+  position: absolute;
   margin: 15px;
+  top: 2%;
+  left: 5%;
+  font-size: 32px;
+  transform: translate(-50%, 0);
   color: rgba(255, 255, 255, 0.4);
-  animation: disappear 2s linear;
 }
 
 .activeMain {
@@ -40,16 +43,9 @@ h1.active {
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  animation: show 3s linear;
+  animation: show 2.5s ease;
   animation-iteration-count: 1;
   opacity: 1;
-  z-index: 1;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 .unActiveApp {
@@ -59,12 +55,8 @@ h1.active {
   background-position: bottom;
   height: 100vh;
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
   flex-direction: column;
   overflow: hidden;
-  animation: active 3s linear,
-  
-  
 }
 
 .unActiveHeader {
@@ -82,7 +74,6 @@ h1.unActive {
   transform: translate(-50%, 0);
   font-size: 60px;
   color: rgba(255, 255, 255, 0.5);
-  animation: disappear 3s linear;
 }
 
 .unActiveMain {
@@ -92,18 +83,6 @@ h1.unActive {
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  z-index: -1;
-}
-
-
-@keyframes disappear {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
 
 @keyframes show {
@@ -122,5 +101,35 @@ h1.unActive {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes disappear {
+  0% {
+    font-size: 60px;
+  }
+
+  50% {
+    font-size: 32px;
+  }
+
+  100% {
+    font-size: 0px;
+  }
+}
+
+@keyframes uph1 {
+  0% {
+    top: 20%;
+  }
+
+  50% {
+    top: 15%;
+  }
+
+  100% {
+    top: 10%;
+  }
 
 }
+
+/* kurwa */
