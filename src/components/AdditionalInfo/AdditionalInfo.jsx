@@ -6,10 +6,6 @@ const AdditionalInfo = ({result, shareToggleClass}) => {
 
   const [api, setApi] = useState(false);
   
-  const giveApi = (shareToggleClass) => {
-    setApi(shareToggleClass)
-  }
-
     return (
      <div className="additionalInfo">
        <div className="maxTemp"> 

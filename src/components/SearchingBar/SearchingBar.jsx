@@ -6,7 +6,7 @@ import './SearchingBar.css'
     base: "https://api.openweathermap.org/data/2.5/"
   }
 
-  const SearchingBar = ({shareApi, shareToggleClass, shareDate}) => {
+  const SearchingBar = ({shareApi, shareToggleClass}) => {
     
     const [toggleClass, setToggleClass] = useState(false);
     const [query, setQuery] = useState('');

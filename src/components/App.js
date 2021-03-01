@@ -7,9 +7,8 @@ import AdditionalInfo from './AdditionalInfo/AdditionalInfo';
 
 const App = () =>  {
 
-  const [result, setResult] = useState({})
+  const [result, setResult] = useState({});
   const [toggleClass, setToggleClass] = useState(false);
-  const [date, setDate] = useState()
  
   const shareApi = (res) => {
     setResult(res)
@@ -19,12 +18,6 @@ const App = () =>  {
     setToggleClass(res)
   }
 
-  const shareDate = (res) => {
-    setDate(res);
-  }
-    
-    console.log(result)
-
     return (
       <div className={toggleClass ? "activeApp" : "unActiveApp" }>
         <div className={toggleClass ? "activeHeader" : "unActiveHeader" }>
@@ -32,7 +25,7 @@ const App = () =>  {
             <SearchingBar shareApi = {shareApi} shareToggleClass = {shareToggleClass}/>
         </div>
         <div className={toggleClass ? "activeMain" : "unActiveMain" }>
-            <WeatherBox result = {result} date = {date}/>
+            <WeatherBox result = {result}/>
             <AdditionalInfo result = {result} shareToggleClass = {shareToggleClass}/>
             <WeekDays result = {result}/>
         </div>

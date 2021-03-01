@@ -5,7 +5,7 @@ const WeekDays = () => {
 
     return (
         <div className="weekDays">
-            <div className="monday"> <p>Monday</p> </div>
+            <div className="monday"> Monday </div>
             <div className="tuesday">Tuesday</div>
             <div className="wednesday">Wednesday</div>
             <div className="thursday">Thursday</div>
