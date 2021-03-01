@@ -5,6 +5,8 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
   background: url(../images/2850815.jpg);
   background-size: cover;
@@ -30,7 +32,7 @@ h1.active {
   position: absolute;
   margin: 15px;
   top: 2%;
-  left: 5%;
+  left: 6%;
   font-size: 32px;
   transform: translate(-50%, 0);
   color: rgba(255, 255, 255, 0.4);

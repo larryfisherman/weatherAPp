@@ -28,7 +28,7 @@ const AdditionalInfo = ({result, shareToggleClass}) => {
           <p>{Math.floor(result.tempMin)}°C</p>
           <p>Temp. min.</p>
         </div>
-        <div className="rain">
+        <div className="pressure">
           <p>{result.pressure} hPa</p>
           <p>Pressure</p>
         </div>

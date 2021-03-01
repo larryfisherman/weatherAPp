@@ -8,8 +8,9 @@
   }
   
 .locationTemp>span {
+    position: relative;
     text-align: center;
-    
+    font-size: 36px;
+    line-height: 60px; 
   }
-  
   

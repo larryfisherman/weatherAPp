@@ -6,20 +6,26 @@
     height: 30%;
     justify-content: space-around;
     align-items: center;
+    font-size: 26px;
+    
+    
   }
   
+  p {
+    line-height: 44px;
+  }
+
   .additionalInfo .maxTemp {
     width: 26%;
     height: 30%;
-    border-right: 1px solid grey;
-    line-height: 75px;
     text-align: center;
+
   }
   
   .additionalInfo .wind {
+    position: relative;
     width: 26%;
     height: 30%;
-    border-right: 1px solid grey;
     line-height: 75px;
     text-align: center;
   }
@@ -34,15 +40,13 @@
   .additionalInfo .lowestTemp {
     width: 26%;
     height: 30%;
-    border-right: 1px solid grey;
     line-height: 75px;
     text-align: center;
   }
   
-  .additionalInfo .rain {
+  .additionalInfo .pressure {
     width: 26%;
     height: 30%;
-    border-right: 1px solid grey;
     line-height: 75px;
     text-align: center;
   }
