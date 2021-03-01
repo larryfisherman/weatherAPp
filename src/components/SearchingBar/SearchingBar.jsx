@@ -19,6 +19,7 @@ import './SearchingBar.css'
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);
+                    const temp = (Math.floor(result.main.temp));
                     const tempMin = result.main.temp_min
                     const tempMax = result.main.temp_max;
                     const location = result.name;
@@ -27,7 +28,9 @@ import './SearchingBar.css'
                     const country = result.sys.country;
                     const wind = result.wind.speed;
                     const pressure = result.main.pressure;
-                    shareApi({ tempMax, location, tempMin, sunrise, sunset, wind, country, pressure });
+                    const sky = result.weather[0].main;
+                    console.log(result.weather[0].main)
+                    shareApi({tempMax, location, tempMin, sunrise, sunset, wind, country, pressure, temp, sky});
                     shareToggleClass({toggleClass})
                     
                 })

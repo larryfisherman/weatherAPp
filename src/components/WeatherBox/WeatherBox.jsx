@@ -1,5 +1,7 @@
 import React from 'react';
 import './WeatherBox.css'
+import { Icons } from '../../icons';
+
 
 const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -14,12 +16,16 @@ const dateBuilder = (d) => {
 }
 
 const WeatherBox = ({result}) => {
-    return (
-        <div className="locationTemp">
-            <span>{result.location}</span>
-            <span>{dateBuilder(new Date())}</span>
-        </div>
-    )
+    
+        return (
+            <div className="locationDate">
+                <span>{result.location}</span>
+                <span>{dateBuilder(new Date())}</span>
+                <span>{result.temp}°C</span>
+                <span>{Icons.result.sky}</span>    
+            </div>
+        )
+
 }
 
 export default WeatherBox;
