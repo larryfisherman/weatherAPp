@@ -30,6 +30,7 @@ import './SearchingBar.css'
                     const pressure = result.main.pressure;
                     const sky = result.weather[0].main;
                     console.log(result.weather[0].main)
+                    console.log(result)
                     shareApi({tempMax, location, tempMin, sunrise, sunset, wind, country, pressure, temp, sky});
                     shareToggleClass({toggleClass})
                     

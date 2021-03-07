@@ -22,7 +22,7 @@ const WeatherBox = ({result}) => {
                 <span>{result.location}</span>
                 <span>{dateBuilder(new Date())}</span>
                 <span>{result.temp}°C</span>
-                <span>{Icons.result.sky}</span>    
+                <img src={Icons[result.sky]} />   
             </div>
         )
 

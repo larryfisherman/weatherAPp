@@ -1,36 +1,41 @@
 .locationDate {
-    display: flex;
-    flex-direction: column;
-   
-    width: 30%;
-    height: 30%;
-  }
-  
-.locationDate>span:nth-child(1) {
-    position: absolute;
-    text-align: center;
-    font-size: 36px;
-    line-height: 60px; 
-    top: 15%;
-    left: 8%;   
-  }
-
-  .locationDate>span:nth-child(2) {
-    position: absolute;
-    text-align: center;
-    font-size: 36px;
-    line-height: 60px; 
-    top: 22%;
-    left: 3%;   
-  }
-  
-  .locationDate>span:nth-child(3) {
-    position: absolute;
-    text-align: right;
-    font-size: 100px;
-    line-height: 60px; 
-    top: 40%;
-    left: 25%;
-  }
+  display: flex;
+  flex-direction: column;
  
-  
+  width: 30%;
+  height: 30%;
+}
+
+.locationDate>span:nth-child(1) {
+  position: absolute;
+  text-align: center;
+  font-size: 36px;
+  line-height: 60px; 
+  top: 15%;
+  left: 8%;   
+}
+
+.locationDate>span:nth-child(2) {
+  position: absolute;
+  text-align: center;
+  font-size: 36px;
+  line-height: 60px; 
+  top: 22%;
+  left: 3%;   
+}
+
+.locationDate>span:nth-child(3) {
+  position: absolute;
+  text-align: right;
+  font-size: 120px;
+  line-height: 6  0px; 
+  top: 38%;
+  left: 28%;
+}
+
+img {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 25%;
+}
