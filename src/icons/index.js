@@ -1,17 +1,17 @@
 import Clear from './Clear.svg'
 import Clouds from './Clouds.svg'
 import Flurries from './Flurries.svg'
-import mist from './mist.svg'
-import rain from './rain.svg'
-import snow from './snow.svg'
-import sunny from './sunny.svg'
+import Mist from './Mist.svg'
+import Rain from './Rain.svg'
+import Snow from './Snow.svg'
+import Sunny from './Sunny.svg'
 
 export const Icons = {
   Clear,
   Clouds,
   Flurries,
-  mist,
-  rain,
-  snow,
-  sunny
+  Mist,
+  Rain,
+  Snow,
+  Sunny
 }
