@@ -13,14 +13,14 @@ input.unActive {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
   border-radius: 16px 16px 16px 16px;
-  
 }
 
 input.Active {
   display: flex;
   position: absolute;
   top: 0;
-  width: 50%;
+  width: 40%;
+  height: 6%;
   justify-self: center;
   align-self: center;
   appearance: none;
@@ -32,51 +32,32 @@ input.Active {
   font-size: 28px;
   border-radius: 0 0 16px 16px;
   transition: all 1s ease,
-     1s ease;  
+  all 1s ease;  
 }
-  input:focus {
-    background-color: rgba(255, 255, 255, 1);
+
+input.Active:focus {
+  width: 45%;
+  height: 8%;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+p {
+  line-height: 35px;
+}
+
+@keyframes move {
+  0% {
+    top: 35%;
   }
 
-  p {
-    line-height: 35px;
+  50% {
+    top: 15%;
   }
 
-  @keyframes scaleInput {
-    0% {
-      transform: scale(1);
-    }
-
-    25% {
-      
-      transform: scale(0.6)
-    }
-
-    50% {
-      transform: scale(0.3);
-    }
-
-    75% {
-      transform:scale(0.6)
-    }
-
-    100% {
-      transform: scale(1);
-      
-
-    }
+  100% {
+    top: 0%;
   }
-
-  @keyframes move {
-    0% {
-      top: 35%;
-    }
-
-    50% {
-      top: 15%;
-    }
-
-    100% {
-      top: 0%;
-    }
-  }
+}

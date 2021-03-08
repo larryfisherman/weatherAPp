@@ -1,7 +1,7 @@
 .locationDate {
   display: flex;
   flex-direction: column;
- 
+  font-weight: bold;
   width: 30%;
   height: 30%;
 }
@@ -9,19 +9,19 @@
 .locationDate>span:nth-child(1) {
   position: absolute;
   text-align: center;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 60px; 
-  top: 15%;
+  top: 37%;
   left: 8%;   
 }
 
 .locationDate>span:nth-child(2) {
   position: absolute;
   text-align: center;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 60px; 
-  top: 22%;
-  left: 3%;   
+  top: 42%;
+  left: 5%;   
 }
 
 .locationDate>span:nth-child(3) {
@@ -29,13 +29,13 @@
   text-align: right;
   font-size: 120px;
   line-height: 6  0px; 
-  top: 38%;
-  left: 28%;
+  top: 25%;
+  left: 25%;
 }
 
 img {
   position: absolute;
   height: 400px;
   width: 400px;
-  top: 25%;
+  top: 0%;
 }
