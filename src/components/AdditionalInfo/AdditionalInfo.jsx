@@ -1,35 +1,33 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './AdditionalInfo.css'
 
 
-const AdditionalInfo = ({result, shareToggleClass}) => {
-
-  const [api, setApi] = useState(false);
+const AdditionalInfo = ({currentWeatherResult}) => {
   
     return (
      <div className="additionalInfo">
-       <div className="maxTemp"> 
-          <p>{Math.floor(result.tempMax)}°C</p>
+       <div className="maxTemp">
+          <p>{Math.floor(currentWeatherResult.tempMax)}°C</p>
           <p>Temp. max.</p>
         </div>
         <div className="wind">
-          <p>{(result.wind)} mph</p>
+          <p>{(currentWeatherResult.wind)} mph</p>
           <p>Wind</p>
         </div>
         <div className="sunrise">
-         <p>{result.sunrise}</p> 
+         <p>{currentWeatherResult.sunrise}</p> 
          <p>Sunrise</p>
         </div>
         <div className="lowestTemp">
-          <p>{Math.floor(result.tempMin)}°C</p>
+          <p>{Math.floor(currentWeatherResult.tempMin)}°C</p>
           <p>Temp. min.</p>
         </div>
         <div className="pressure">
-          <p>{result.pressure} hPa</p>
+          <p>{currentWeatherResult.pressure} hPa</p>
           <p>Pressure</p>
         </div>
         <div className="sunset">
-          <p>{result.sunset}</p>
+          <p>{currentWeatherResult.sunset}</p>
           <p>Sunset</p>  
         </div>
      </div>

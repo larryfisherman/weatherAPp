@@ -7,27 +7,33 @@ import AdditionalInfo from './AdditionalInfo/AdditionalInfo';
 
 const App = () =>  {
 
-  const [result, setResult] = useState({});
+  const [currentWeatherResult, setCurrentWeatherResult] = useState({});
+  const [fiveDaysWeatherResult, setFiveDaysWeatherResult] = useState({})
   const [toggleClass, setToggleClass] = useState(false);
+
  
-  const shareApi = (res) => {
-    setResult(res)
+  const shareCurrentWeatherResult = (res) => {
+    setCurrentWeatherResult(res)
   }
   
   const shareToggleClass = (res) => {
     setToggleClass(res)
   }
 
+  const shareFiveDaysWeatherResult = (res) => {
+    setFiveDaysWeatherResult(res)
+  }
+
     return (
       <div className={toggleClass ? "activeApp" : "unActiveApp" }>
         <div className={toggleClass ? "activeHeader" : "unActiveHeader" }>
             <h1 className = {toggleClass ? "active" : "unActive" }> Weather App </h1>
-            <SearchingBar shareApi = {shareApi} shareToggleClass = {shareToggleClass}/>
+            <SearchingBar shareFiveDaysWeatherResult = {shareFiveDaysWeatherResult} shareCurrentWeatherResult = {shareCurrentWeatherResult} shareToggleClass = {shareToggleClass}/>
         </div>
         <div className={toggleClass ? "activeMain" : "unActiveMain" }>
-            <WeatherBox result = {result}/>
-            <AdditionalInfo result = {result} shareToggleClass = {shareToggleClass}/>
-            <WeekDays result = {result}/>
+            <WeatherBox currentWeatherResult = {currentWeatherResult}/>
+            <AdditionalInfo currentWeatherResult = {currentWeatherResult} shareToggleClass = {shareToggleClass}/>
+            <WeekDays shareFiveDaysWeatherResult = {fiveDaysWeatherResult}/>
         </div>
     </div>
   )

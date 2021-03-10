@@ -15,14 +15,14 @@ const dateBuilder = (d) => {
     return `${day} ${date} ${month} ${year}`
 }
 
-const WeatherBox = ({result}) => {
+const WeatherBox = ({currentWeatherResult}) => {
     
         return (
             <div className="locationDate">
-                <span>{result.location}</span>
+                <span>{currentWeatherResult.location}</span>
                 <span>{dateBuilder(new Date())}</span>
-                <span>{result.temp}°C</span>
-                <img src={Icons[result.sky]} />   
+                <span>{currentWeatherResult.temp}°C</span>
+                <img src={Icons[currentWeatherResult.sky]} alt={Icons[currentWeatherResult.sky]} />   
             </div>
         )
 

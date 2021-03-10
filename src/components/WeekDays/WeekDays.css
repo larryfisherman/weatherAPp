@@ -7,7 +7,7 @@
   }
   
   .weekDays .monday {
-    width: 13%;
+    width: 20%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
@@ -15,7 +15,7 @@
   }
   
   .weekDays .tuesday {
-    width: 13%;
+    width: 20%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
@@ -23,7 +23,7 @@
   }
   
   .weekDays .wednesday {
-    width: 13%;
+    width: 20%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
@@ -31,7 +31,7 @@
   }
   
   .weekDays .thursday {
-    width: 13%;
+    width: 20%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
@@ -40,25 +40,15 @@
   
   
   .weekDays .friday {
-    width: 13%;
+    width: 20%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
     line-height: 175px;
   }
   
-  
-  .weekDays .saturday {
-    width: 13%;
-    height: 70%;
-    border-right: 1px solid grey;
-    text-align: center;
-    line-height: 175px;
-  }
-  
-  .weekDays .sunday {
-    width: 13%;
-    height: 70%;
-    text-align: center;
-    line-height: 175px;
+  .weekDays img {
+    position: relative;
+    left: -20%;
+
   }
