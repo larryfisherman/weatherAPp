@@ -11,7 +11,12 @@ import './SearchingBar.css'
     key: "5fd2a278c2455f638b0fe4da35b1d244"
   }
 
-  const SearchingBar = ({shareCurrentWeatherResult, shareToggleClass, shareFiveDaysWeatherResult}) => {
+  const weatherBit = {
+    key: "d94ac67839f0473f83b5add7ffc287c9",
+    base: "https://api.weatherbit.io/v2.0/forecast/"
+  }
+
+  const SearchingBar = ({shareCurrentWeatherResult, shareToggleClass, shareNextHours}) => {
 
     const [toggleClass, setToggleClass] = useState(false);
     const [query, setQuery] = useState('');
@@ -24,10 +29,16 @@ import './SearchingBar.css'
               .then(res => res.json())
               .then (result => {
                 console.log(result)
-                const temp = result.list[6].main.temp;
-                const sky = result.list[6].weather[0].main;
-                console.log(result.list[6].weather[0].main)
-                shareFiveDaysWeatherResult({temp, sky})
+                const threeHoursTemp = (Math.floor(Math.round(result.list[0].main.temp) - 273.15))
+                const threeHoursSky = result.list[0].weather[0].main
+                const threeHoursDate = result.list[0].dt_txt
+                const sixHoursTemp = (Math.floor(Math.round(result.list[12].main.temp) - 273.15))
+                const sixHoursSky = result.list[1].weather[0].main;
+                const sixHoursDate = result.list[1].dt_txt
+                const nineHoursTemp = (Math.floor(Math.round(result.list[2].main.temp) - 273.15 ))
+                const nineHoursSky = result.list[2].weather[0].main
+                const nineHoursDate = result.list[2].dt_txt
+                shareNextHours({threeHoursTemp, threeHoursSky, threeHoursDate, sixHoursTemp, sixHoursSky, sixHoursDate, nineHoursTemp, nineHoursSky, nineHoursDate})
             })
             fetch(`${currentWeatherApi.base}weather?q=${query}&units=metric&APPID=${currentWeatherApi.key}`)
                 .then(res => res.json())

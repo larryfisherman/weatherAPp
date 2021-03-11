@@ -16,7 +16,6 @@ const dateBuilder = (d) => {
 }
 
 const WeatherBox = ({currentWeatherResult}) => {
-    
         return (
             <div className="locationDate">
                 <span>{currentWeatherResult.location}</span>

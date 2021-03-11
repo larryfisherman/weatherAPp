@@ -2,53 +2,54 @@
     display: flex;
     background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
-    justify-content: space-around;
     align-items: center;
   }
   
-  .weekDays .monday {
-    width: 20%;
+  .weekDays .one {
+    width: 24%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
-    line-height: 175px;
   }
   
-  .weekDays .tuesday {
-    width: 20%;
+  .weekDays .two {
+    width: 24%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
-    line-height: 175px;
   }
   
-  .weekDays .wednesday {
-    width: 20%;
+  .weekDays .three {
+    width: 24%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
-    line-height: 175px;
   }
   
-  .weekDays .thursday {
-    width: 20%;
+  .weekDays .four {
+    width: 24%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
-    line-height: 175px;
   }
   
   
-  .weekDays .friday {
-    width: 20%;
+  .weekDays .five {
+    width: 24%;
     height: 70%;
     border-right: 1px solid grey;
     text-align: center;
-    line-height: 175px;
   }
   
-  .weekDays img {
-    position: relative;
-    left: -20%;
+ .weekDays img {
+   position: relative;
+   width: 35%;
+   height: 35%;
+ }
 
-  }
+ .weekDays span {
+  display: block;
+  line-height: 45px;
+    font-size: 3vh;
+ }
+
