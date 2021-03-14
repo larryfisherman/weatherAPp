@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import './SearchingBar.css'
+import React from 'react';
 
-  const SearchingBar = ({shareCurrentWeatherResult, shareToggleClass, shareNextHours}) => {
+const currentWeatherApi = {
+    key: "5460cb53463514612fab001d3067fc4e",
+    base: "https://api.openweathermap.org/data/2.5/"
+  }
 
-    const [toggleClass, setToggleClass] = useState(false);
-    const [query, setQuery] = useState('');
-    const [weather, setWeather] = useState({});
+  const fiveDaysApi = {
+    base: "https://api.openweathermap.org/data/2.5/",
+    key: "5fd2a278c2455f638b0fe4da35b1d244"
+  }
 
-    const search = event => {
-        if(event.key === "Enter") {
-            setToggleClass(true);
-            fetch(`${fiveDaysApi.base}forecast?q=${query}&appid=${fiveDaysApi.key}`)
+const API = () => {
+    
+    fetch(`${fiveDaysApi.base}forecast?q=${query}&appid=${fiveDaysApi.key}`)
               .then(res => res.json())
               .then (result => {
                 console.log(result)
@@ -30,6 +32,7 @@ import './SearchingBar.css'
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);
+                    console.log(result);
                     const temp = (Math.floor(result.main.temp));
                     const tempMin = result.main.temp_min
                     const tempMax = result.main.temp_max;
@@ -43,17 +46,5 @@ import './SearchingBar.css'
                     shareCurrentWeatherResult({tempMax, location, tempMin, sunrise, sunset, wind, country, pressure, temp, sky});
                     shareToggleClass({toggleClass})
                 })
-        }
-    }
-    return (
-        <input type = "text"
-          placeholder = "Search.."
-          className = {toggleClass ? "Active" : "unActive"}
-          onChange = {e => setQuery(e.target.value)}
-          value = {query}
-          onKeyPress = {search}
-        />
-    )
 }
 
-export default SearchingBar;

@@ -1,0 +1,5 @@
+const CURRENT_WEATHER = 'CURRENT_WEATHER';
+
+export default {
+    CURRENT_WEATHER
+}
