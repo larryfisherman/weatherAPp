@@ -1,8 +1,8 @@
-import React from 'react';
 import { applyMiddleware, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk';
 import apiReducer from '../duck/reducer'
 
-const store = createStore(apiReducer, applyMiddleware(thunk))
+const store = createStore(apiReducer, composeWithDevTools())
 
 export default store;

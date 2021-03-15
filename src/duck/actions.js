@@ -1,9 +1,9 @@
 import types from './types'
 
-const add = item => ({
-    type: types.CURRENT_WEATHER, item
+const addValue = item => ({
+    type: types.INPUT_VALUE, item
 })
 
 export default {
-    add
+    addValue
 }
