@@ -16,7 +16,7 @@ import actions from '../../duck/actions'
         if(event.key === "Enter") {
             setToggleClass(true);
             shareToggleClass({toggleClass})
-            dispatch({type: 'addValue', payload: query})
+            dispatch({type: 'ADD_INPUT_VALUE', payload: query})
         }
     }
     return (

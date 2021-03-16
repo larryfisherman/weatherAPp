@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import searchingBar from '../components/SearchingBar/SearchingBar'
+import React, { useEffect } from 'react';
 import store from '../store/store'
 
 const currentWeatherApi = {
@@ -13,14 +12,14 @@ const currentWeatherApi = {
   }
 
   const API = () => {
-
-    const [api, setApi] = useState('')
-
-    if(api) {
-      fetch(`${fiveDaysApi.base}forecast?q=${api}&appid=${fiveDaysApi.key}`)
+    const state = store.getStore();
+    const inputValue = state.searchingBar;
+    
+    if(inputValue) {
+      fetch(`${fiveDaysApi.base}forecast?q=${inputValue}&appid=${fiveDaysApi.key}`)
         .then(res => res.json())
         .then (result => {
-          console.log(api)
+          console.log(inputValue)
           const threeHoursTemp = (Math.floor(Math.round(result.list[0].main.temp) - 273.15))
           const threeHoursSky = result.list[0].weather[0].main
           const threeHoursDate = result.list[0].dt_txt
@@ -32,7 +31,7 @@ const currentWeatherApi = {
           const nineHoursSky = result.list[2].weather[0].main
           const nineHoursDate = result.list[2].dt_txt
     })
-      fetch(`${currentWeatherApi.base}weather?q=${api}&units=metric&APPID=${currentWeatherApi.key}`)
+      fetch(`${currentWeatherApi.base}weather?q=${inputValue}&units=metric&APPID=${currentWeatherApi.key}`)
         .then(res => res.json())
         .then(result => {
           const temp = (Math.floor(result.main.temp));
