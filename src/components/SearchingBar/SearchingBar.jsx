@@ -7,7 +7,7 @@ import actions from '../../duck/actions'
   const SearchingBar = ({shareToggleClass, addValue}) => {
 
     const inputValue = useSelector(state => state.inputValue);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch(inputValue)
     
     const [toggleClass, setToggleClass] = useState(false);
     const [query, setQuery] = useState('');
