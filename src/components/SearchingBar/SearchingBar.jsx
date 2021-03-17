@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import './SearchingBar.css'
-import actions from '../../duck/actions'
+import { useDispatch, useSelector } from 'react-redux';
 import store from '../../store/store';
-import inputSlice from '../../duck/reducer';
-
+import updateValue from '../../duck/reducer'
 
   const SearchingBar = ({shareToggleClass}) => {
     
+
+    const dispatch = useDispatch();
     const [toggleClass, setToggleClass] = useState(false);
     const [query, setQuery] = useState('');
 
@@ -15,7 +15,7 @@ import inputSlice from '../../duck/reducer';
         if(event.key === "Enter") {
             setToggleClass(true);
             shareToggleClass({toggleClass})
-            store.dispatch(inputSlice.actions.updateValue(query))
+            dispatch(updateValue(query))
         }
     }
     return (

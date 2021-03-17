@@ -20,10 +20,12 @@ const INITIAL_STATE = {
 	}
 }
 
+const initialState = {
+	inputValue: ''
+}
+
 const inputSlice = createSlice({
-	initialState: {
-		inputValue: ''
-	},
+	initialState,
 	name: 'searchingBar',
 	reducers: {
 		updateValue: (state, action) => {
@@ -32,4 +34,5 @@ const inputSlice = createSlice({
 	}
 })
 
+export const { updateValue } = inputSlice.actions
 export default inputSlice.reducer;
