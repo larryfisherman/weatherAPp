@@ -1,13 +1,7 @@
-import type from './types';
-import update from 'immutability-helper';
-
+import { createSlice } from '@reduxjs/toolkit'
 
 const INITIAL_STATE = {
-	searchingBar:
-	{
-		inputValue: ''
-	},
-	apiConnection: 
+	currentWeatherAPI: 
 	{
 		temp: '',
 		tempMin: '',
@@ -19,22 +13,23 @@ const INITIAL_STATE = {
 		country: '',
 		wind: '',
 		pressure: '',
-	}
-		
-}
+	},
+	fiveDaysForecatsAPI: 
+	{
 
-const apiReducer = (state = INITIAL_STATE, action) => {
-	switch (action.type) {
-		case type.ADD_INPUT_VALUE:
-			return update(state, { 
-				searchingBar: { 
-					inputValue: {$set: action.payload}
-				  }
-				});
-			
-		default:
-			return state;
 	}
 }
 
-export default apiReducer;
+const inputSlice = createSlice({
+	initialState: {
+		inputValue: ''
+	},
+	name: 'searchingBar',
+	reducers: {
+		updateValue: (state, action) => {
+			state.inputValue = action.payload;
+		}
+	}
+})
+
+export default inputSlice.reducer;
