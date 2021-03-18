@@ -12,20 +12,14 @@ const WeekDays = ({ nextHours }) => {
       Math.round(data.list[0].main.temp) - 273.15
     );
     const threeHoursSky = data.list[0].weather[0].main;
-    const threeHoursDate = data.list[0].dt_txt;
     const sixHoursTemp = Math.floor(
       Math.round(data.list[12].main.temp) - 273.15
     );
-    const hours = Math.floor(
-      (data.list[0].weather[0].main / (1000 * 60 * 60)) % 24
-    );
     const sixHoursSky = data.list[1].weather[0].main;
-    const sixHoursDate = data.list[1].dt_txt;
     const nineHoursTemp = Math.floor(
       Math.round(data.list[2].main.temp) - 273.15
     );
     const nineHoursSky = data.list[2].weather[0].main;
-    const nineHoursDate = data.list[2].dt_txt;
     return (
       <div className="weekDays">
         <div className="one">
