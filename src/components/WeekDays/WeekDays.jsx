@@ -1,53 +1,67 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./WeekDays.css";
 import { Icons } from "../../icons";
 import moment from "moment";
 
 const WeekDays = ({ nextHours }) => {
-  return (
-    <div className="weekDays">
-      <div className="one">
-        <img
-          src={Icons[nextHours.threeHoursSky]}
-          alt={Icons[nextHours.threeHoursSky]}
-        />
-        <span>{nextHours.threeHoursTemp} °C</span>
-        <span>{moment().add(3, "hours").calendar()}</span>
+  const isApiLoaded = useSelector((state) => state.weather.isApiLoaded);
+  const data = useSelector((state) => state.weather.fiveDaysWeatherData);
+  if (isApiLoaded) {
+    const threeHoursTemp = Math.floor(
+      Math.round(data.list[0].main.temp) - 273.15
+    );
+    const threeHoursSky = data.list[0].weather[0].main;
+    const threeHoursDate = data.list[0].dt_txt;
+    const sixHoursTemp = Math.floor(
+      Math.round(data.list[12].main.temp) - 273.15
+    );
+    const hours = Math.floor(
+      (data.list[0].weather[0].main / (1000 * 60 * 60)) % 24
+    );
+    const sixHoursSky = data.list[1].weather[0].main;
+    const sixHoursDate = data.list[1].dt_txt;
+    const nineHoursTemp = Math.floor(
+      Math.round(data.list[2].main.temp) - 273.15
+    );
+    const nineHoursSky = data.list[2].weather[0].main;
+    const nineHoursDate = data.list[2].dt_txt;
+    return (
+      <div className="weekDays">
+        <div className="one">
+          <img src={Icons[threeHoursSky]} alt={Icons[threeHoursSky]} />
+          <span>{threeHoursTemp} °C</span>
+          <span>{moment().add(3, "hours").calendar()}</span>
+        </div>
+        <div className="two">
+          <img src={Icons[sixHoursSky]} alt={Icons[sixHoursSky]} />
+          <span>{sixHoursTemp} °C</span>
+          <span>{moment().add(6, "hours").calendar()}</span>
+        </div>
+        <div className="three">
+          <img src={Icons[nineHoursSky]} alt={Icons[nineHoursSky]} />
+          <span>{nineHoursTemp} °C</span>
+          <span>{moment().add(9, "hours").calendar()}</span>
+        </div>
+        <div className="four">
+          <img src={Icons[sixHoursSky]} alt={Icons[sixHoursSky]} />
+          <span>{sixHoursTemp} °C</span>
+          <span>{moment().add(12, "hours").calendar()}</span>
+        </div>
+        <div className="five">
+          <img src={Icons[sixHoursSky]} alt={Icons[sixHoursSky]} />
+          <span>{sixHoursTemp} °C</span>
+          <span>{moment().add(15, "hours").calendar()}</span>
+        </div>
       </div>
-      <div className="two">
-        <img
-          src={Icons[nextHours.sixHoursSky]}
-          alt={Icons[nextHours.sixHoursSky]}
-        />
-        <span>{nextHours.sixHoursTemp} °C</span>
-        <span>{moment().add(6, "hours").calendar()}</span>
-      </div>
-      <div className="three">
-        <img
-          src={Icons[nextHours.nineHoursSky]}
-          alt={Icons[nextHours.nineHoursSky]}
-        />
-        <span>{nextHours.nineHoursTemp} °C</span>
-        <span>{moment().add(9, "hours").calendar()}</span>
-      </div>
-      <div className="four">
-        <img
-          src={Icons[nextHours.sixHoursSky]}
-          alt={Icons[nextHours.sixHoursSky]}
-        />
-        <span>{nextHours.sixHoursTemp} °C</span>
-        <span>{moment().add(12, "hours").calendar()}</span>
-      </div>
-      <div className="five">
-        <img
-          src={Icons[nextHours.sixHoursSky]}
-          alt={Icons[nextHours.sixHoursSky]}
-        />
-        <span>{nextHours.sixHoursTemp} °C</span>
-        <span>{moment().add(15, "hours").calendar()}</span>
-      </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <>
+        <h1>api error</h1>
+      </>
+    );
+  }
 };
 
 export default WeekDays;

@@ -37,7 +37,7 @@ export const getWeather = (city, onSuccess = () => {}, onError = () => {}) => {
         const nextHoursResData = await nextHoursRes.json();
         throw new Error(nextHoursResData.message);
       }
-      const nextHoursResData = await nextHoursResData.json();
+      const nextHoursResData = await nextHoursRes.json();
       dispatch({
         type: GET_NEXTHOURS_WEATHER,
         payload: nextHoursResData,
