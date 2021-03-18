@@ -14,19 +14,9 @@ const currentWeatherApi = {
 
   const API = () => {
 
-    const state = store.getState();
 
-    const fetch = (url, options) => {
-      return new Promise((resolve) => {
-        const response = {
-          json: async () => "boom"
-        };
-        return resolve(response);
-      });
-    };
-    
-    if(state.searchingBar.inputValue) {
-      fetch(`${currentWeatherApi.base}weather?q=${state.searchingBar.inputValue}&units=metric&APPID=${currentWeatherApi.key}`)
+    if(input) {
+      fetch(`${currentWeatherApi.base}weather?q=${input}&units=metric&APPID=${currentWeatherApi.key}`)
       .then(res => res.json())
       .then(result => {
         console.log(result)
