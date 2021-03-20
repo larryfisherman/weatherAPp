@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
   background: url(../images/2850815.jpg);
@@ -16,13 +16,13 @@ body {
 .activeApp {
   display: flex;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
 }
 
 .activeHeader {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-between;
   height: 80px;
   flex-wrap: nowrap;
@@ -33,10 +33,9 @@ h1.active {
   margin: 15px;
   top: 2%;
   left: 6%;
-  font-size: 32px;
+  font-size: 4vh;
   transform: translate(-50%, 0);
   color: rgba(255, 255, 255, 0.4);
-  
 }
 
 .activeMain {
@@ -57,16 +56,16 @@ h1.active {
   background-size: cover;
   background-position: bottom;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
   overflow: hidden;
 }
 
 .unActiveHeader {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-between;
-  height: 80px;
+  height: 10vh;
   flex-wrap: nowrap;
 }
 
@@ -75,17 +74,21 @@ h1.unActive {
   top: 20%;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 60px;
+  font-size: 5vh;
+  white-space: nowrap;
   color: rgba(255, 255, 255, 0.5);
 }
 
 .unActiveMain {
   display: none;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   justify-content: space-around;
   align-items: center;
+}
+
+@media (max-width: 1250px) {
 }
 
 @keyframes show {
@@ -132,7 +135,4 @@ h1.unActive {
   100% {
     top: 10%;
   }
-
 }
-
-/* kurwa */

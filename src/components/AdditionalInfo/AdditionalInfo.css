@@ -1,57 +1,57 @@
 .additionalInfo {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.5);
-    flex-wrap: wrap;
-    width: 50%;
-    height: 30%;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 26px;
-  }
-  
-  p {
-    line-height: 44px;
-  }
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  flex-wrap: wrap;
+  width: 50vw;
+  height: 30vh;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 16px 16px 16px 16px;
+}
 
-  .additionalInfo .maxTemp {
-    width: 26%;
-    height: 30%;
-    text-align: center;
-  }
-  
-  .additionalInfo .wind {
-    width: 26%;
-    height: 30%;
-    line-height: 75px;
-    text-align: center;
-  }
-  
-  .additionalInfo .sunrise {
-    width: 26%;
-    height: 30%;
-    line-height: 75px;
-    text-align: center;
-  }
-  
-  .additionalInfo .lowestTemp {
-    width: 26%;
-    height: 30%;
-    line-height: 75px;
-    text-align: center;
-  }
-  
-  .additionalInfo .pressure {
-    width: 26%;
-    height: 30%;
-    line-height: 75px;
-    text-align: center;
-  }
-  
-  .additionalInfo .sunset {
-    width: 26%;
-    height: 30%;
-    line-height: 75px;
-    text-align: center;
-  }
-  
-  
+p {
+  white-space: nowrap;
+  font-size: 1.5vw;
+}
+
+.additionalInfo .maxTemp {
+  width: 26%;
+  height: 30%;
+  line-height: 20%;
+  text-align: center;
+}
+
+.additionalInfo .wind {
+  width: 26%;
+  height: 30%;
+  line-height: 20%;
+  text-align: center;
+}
+
+.additionalInfo .sunrise {
+  width: 26%;
+  height: 30%;
+  line-height: 20%;
+  text-align: center;
+}
+
+.additionalInfo .lowestTemp {
+  width: 26%;
+  height: 30%;
+  line-height: 20%;
+  text-align: center;
+}
+
+.additionalInfo .pressure {
+  width: 26%;
+  height: 30%;
+  line-height: 20%;
+  text-align: center;
+}
+
+.additionalInfo .sunset {
+  width: 26%;
+  height: 30%;
+  line-height: 20%;
+  text-align: center;
+}

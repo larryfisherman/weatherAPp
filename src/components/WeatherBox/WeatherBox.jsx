@@ -14,22 +14,18 @@ const WeatherBox = () => {
     const country = data.sys.country;
     return (
       <div className="locationDate">
+        <img src={Icons[sky]} alt={[sky]} />
+        <span>{temp}°C</span>
         <span>
           {data.name} - {country}
         </span>
         <span>
           {moment().format("dddd")}, {moment().format("LL")}{" "}
         </span>
-        <span>{temp}°C</span>
-        <img src={Icons[sky]} alt={[sky]} />
       </div>
     );
   } else {
-    return (
-      <>
-        <h1>API ERROR</h1>
-      </>
-    );
+    return null;
   }
 };
 

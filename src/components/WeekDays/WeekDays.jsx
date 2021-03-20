@@ -50,11 +50,7 @@ const WeekDays = ({ nextHours }) => {
       </div>
     );
   } else {
-    return (
-      <>
-        <h1>api error</h1>
-      </>
-    );
+    return null;
   }
 };
 
