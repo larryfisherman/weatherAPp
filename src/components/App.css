@@ -11,6 +11,7 @@ body {
   background: url(../images/2850815.jpg);
   background-size: cover;
   background-position: bottom;
+  overflow: hidden;
 }
 
 .activeApp {
@@ -74,7 +75,7 @@ h1.unActive {
   top: 20%;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 5vh;
+  font-size: 5vw;
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.5);
 }
