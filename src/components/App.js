@@ -15,7 +15,6 @@ const App = () => {
   return (
     <div className={toggleClass ? "activeApp" : "unActiveApp"}>
       <div className={toggleClass ? "activeHeader" : "unActiveHeader"}>
-        <h1 className={toggleClass ? "active" : "unActive"}> Weather App </h1>
         <SearchingBar shareToggleClass={shareToggleClass} />
       </div>
       <div className={toggleClass ? "activeMain" : "unActiveMain"}>

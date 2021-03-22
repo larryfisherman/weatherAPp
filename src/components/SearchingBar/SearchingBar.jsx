@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./SearchingBar.css";
 import { useDispatch } from "react-redux";
 import { getWeather } from "../../store/actions/weatherActions";

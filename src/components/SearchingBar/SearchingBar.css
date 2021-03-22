@@ -31,8 +31,7 @@ input.Active {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
   border-radius: 0 0 16px 16px;
-  transition: all 1s ease,
-  all 1s ease;  
+  transition: all 1s ease, all 1s ease;
 }
 
 input.Active:focus {
@@ -46,6 +45,36 @@ input:focus {
 
 p {
   line-height: 35px;
+}
+
+@media (max-width: 940px) {
+  input.Active {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    width: 80%;
+    height: 6%;
+    justify-self: center;
+    align-self: center;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    border-radius: 16px 16px 16px 16px;
+    transition: all 1s ease, all 1s ease;
+  }
+
+  input.Active:focus {
+    width: 85%;
+    height: 6%;
+  }
+
+  input:focus {
+    background-color: rgba(255, 255, 255, 1);
+  }
 }
 
 @keyframes move {

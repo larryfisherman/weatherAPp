@@ -30,3 +30,26 @@
   width: 25vw;
   align-self: flex-end;
 }
+
+@media (max-width: 940px) {
+  .locationDate {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    width: 100%;
+    height: 40%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .locationDate img {
+    height: 30vh;
+    width: 35vh;
+  }
+
+  .locationDate > span:nth-child(2) {
+    font-size: 10vw;
+    width: 15vw;
+    height: 13vh;
+  }
+}

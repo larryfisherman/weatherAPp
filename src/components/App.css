@@ -89,7 +89,42 @@ h1.unActive {
   align-items: center;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 641px) {
+  .activeApp {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .activeHeader {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    flex-wrap: nowrap;
+  }
+
+  h1.active {
+    position: absolute;
+    margin: 15px;
+    top: 2%;
+    left: 6%;
+    font-size: 4vh;
+    transform: translate(-50%, 0);
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .activeMain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    animation: show 2s linear;
+    animation-iteration-count: 1;
+    opacity: 1;
+  }
 }
 
 @keyframes show {
@@ -136,4 +171,7 @@ h1.unActive {
   100% {
     top: 10%;
   }
+}
+
+@media only screen and (max-device-width: 1024) {
 }
