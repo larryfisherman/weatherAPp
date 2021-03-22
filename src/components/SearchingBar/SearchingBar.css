@@ -47,7 +47,24 @@ p {
   line-height: 35px;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 641px) {
+  input.unActive {
+    display: flex;
+    position: absolute;
+    top: 35%;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    border-radius: 16px 16px 16px 16px;
+  }
+
   input.Active {
     display: flex;
     position: absolute;

@@ -104,13 +104,7 @@ h1.unActive {
   }
 
   h1.active {
-    position: absolute;
-    margin: 15px;
-    top: 2%;
-    left: 6%;
-    font-size: 4vh;
-    transform: translate(-50%, 0);
-    color: rgba(255, 255, 255, 0.4);
+    display: none;
   }
 
   .activeMain {
@@ -125,37 +119,35 @@ h1.unActive {
     animation-iteration-count: 1;
     opacity: 1;
   }
+  h1.unActive {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 5vw;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .unActiveMain {
+    display: none;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 0;
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes disappear {
-  0% {
-    font-size: 60px;
-  }
-
-  50% {
-    font-size: 32px;
-  }
-
-  100% {
-    font-size: 0px;
+@media (max-width: 940px) {
+  h1.unActive {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 10vw;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -171,7 +163,4 @@ h1.unActive {
   100% {
     top: 10%;
   }
-}
-
-@media only screen and (max-device-width: 1024) {
 }
