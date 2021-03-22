@@ -13,13 +13,13 @@ const WeekDays = ({ nextHours }) => {
     );
     const threeHoursSky = data.list[0].weather[0].main;
     const sixHoursTemp = Math.floor(
-      Math.round(data.list[12].main.temp) - 273.15
+      Math.round(data.list[3].main.temp) - 273.15
     );
     const sixHoursSky = data.list[1].weather[0].main;
     const nineHoursTemp = Math.floor(
       Math.round(data.list[2].main.temp) - 273.15
     );
-    const nineHoursSky = data.list[2].weather[0].main;
+    const nineHoursSky = data.list[6].weather[0].main;
     return (
       <div className="weekDays">
         <div className="one">
@@ -38,13 +38,13 @@ const WeekDays = ({ nextHours }) => {
           <span>{moment().add(9, "hours").calendar()}</span>
         </div>
         <div className="four">
-          <img src={Icons[sixHoursSky]} alt={Icons[sixHoursSky]} />
-          <span>{sixHoursTemp} °C</span>
+          <img src={Icons[nineHoursSky]} alt={Icons[sixHoursSky]} />
+          <span>{nineHoursTemp} °C</span>
           <span>{moment().add(12, "hours").calendar()}</span>
         </div>
         <div className="five">
-          <img src={Icons[sixHoursSky]} alt={Icons[sixHoursSky]} />
-          <span>{sixHoursTemp} °C</span>
+          <img src={Icons[nineHoursSky]} alt={Icons[sixHoursSky]} />
+          <span>{nineHoursTemp} °C</span>
           <span>{moment().add(15, "hours").calendar()}</span>
         </div>
       </div>

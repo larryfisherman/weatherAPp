@@ -139,7 +139,7 @@ h1.unActive {
   }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1025px) {
   h1.unActive {
     position: absolute;
     top: 20%;

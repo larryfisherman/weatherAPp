@@ -47,7 +47,7 @@ p {
   line-height: 35px;
 }
 
-@media (max-width: 641px) {
+@media (max-width: 1025px) {
   input.unActive {
     display: flex;
     position: absolute;

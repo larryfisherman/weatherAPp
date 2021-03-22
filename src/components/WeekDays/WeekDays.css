@@ -52,7 +52,7 @@
   font-size: 3vh;
 }
 
-@media (max-width: 641px) {
+@media (max-width: 1025px) {
   .weekDays {
     display: flex;
     background-color: rgba(255, 255, 255, 0.8);
@@ -62,7 +62,8 @@
 
   .weekDays span {
     display: block;
-    line-height: 45px;
-    font-size: 2vh;
+    line-height: 35px;
+    font-size: 2.5vw;
+    padding: 8px;
   }
 }
