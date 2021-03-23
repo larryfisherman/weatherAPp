@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SearchingBar.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getWeather } from "../../store/actions/weatherActions";
 
 const SearchingBar = ({ shareToggleClass }) => {
@@ -8,11 +8,17 @@ const SearchingBar = ({ shareToggleClass }) => {
   const [toggleClass, setToggleClass] = useState(false);
   const [query, setQuery] = useState("");
 
+  const isApiLoaded = useSelector((state) => state.weather.isApiLoaded);
+
   const search = (event) => {
     if (event.key === "Enter") {
-      setToggleClass(true);
-      shareToggleClass({ toggleClass });
       dispatch(getWeather(query));
+      if (isApiLoaded) {
+        setToggleClass(true);
+        shareToggleClass({ toggleClass });
+      } else {
+        return;
+      }
     }
   };
   return (

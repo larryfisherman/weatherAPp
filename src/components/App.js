@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import SearchingBar from "./SearchingBar/SearchingBar";
 import WeatherBox from "./WeatherBox/WeatherBox";
-import WeekDays from "../components/WeekDays/WeekDays";
+import NextHours from "./NextHours/nextHours";
 import AdditionalInfo from "./AdditionalInfo/AdditionalInfo";
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
       <div className={toggleClass ? "activeMain" : "unActiveMain"}>
         <WeatherBox />
         <AdditionalInfo shareToggleClass={shareToggleClass} />
-        <WeekDays />
+        <NextHours />
       </div>
     </div>
   );

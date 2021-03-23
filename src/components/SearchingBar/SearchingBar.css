@@ -18,7 +18,7 @@ input.unActive {
 input.Active {
   display: flex;
   position: absolute;
-  top: 0;
+  top: 5%;
   width: 40%;
   height: 6%;
   justify-self: center;
@@ -30,7 +30,7 @@ input.Active {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 28px;
-  border-radius: 0 0 16px 16px;
+  border-radius: 16px 16px 16px 16px;
   transition: all 1s ease, all 1s ease;
 }
 
@@ -52,6 +52,53 @@ p {
     display: flex;
     position: absolute;
     top: 35%;
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    border-radius: 16px 16px 16px 16px;
+  }
+
+  input.Active {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    width: 80%;
+    height: 6%;
+    justify-self: center;
+    align-self: center;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    border-radius: 16px 16px 16px 16px;
+    transition: all 1s ease, all 1s ease;
+  }
+
+  input.Active:focus {
+    width: 85%;
+    height: 6%;
+  }
+
+  input:focus {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@media (max-width: 1025px) and (orientation: landscape) {
+  input.unActive {
+    display: flex;
+    position: absolute;
+    top: 50%;
     width: 80%;
     justify-self: center;
     align-self: center;

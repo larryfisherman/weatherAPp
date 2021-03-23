@@ -1,69 +1,75 @@
-.weekDays {
+.nextHours {
   display: flex;
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   align-items: center;
 }
 
-.weekDays .one {
+.nextHours .one {
   width: 24%;
   height: 70%;
   border-right: 1px solid grey;
   text-align: center;
 }
 
-.weekDays .two {
+.nextHours .two {
   width: 24%;
   height: 70%;
   border-right: 1px solid grey;
   text-align: center;
 }
 
-.weekDays .three {
+.nextHours .three {
   width: 24%;
   height: 70%;
   border-right: 1px solid grey;
   text-align: center;
 }
 
-.weekDays .four {
+.nextHours .four {
   width: 24%;
   height: 70%;
   border-right: 1px solid grey;
   text-align: center;
 }
 
-.weekDays .five {
+.nextHours .five {
   width: 24%;
   height: 70%;
-  border-right: 1px solid grey;
+
   text-align: center;
 }
 
-.weekDays img {
+.nextHours img {
   position: relative;
   width: 35%;
   height: 35%;
 }
 
-.weekDays span {
+.nextHours span {
   display: block;
   line-height: 45px;
   font-size: 3vh;
 }
 
 @media (max-width: 1025px) {
-  .weekDays {
+  .nextHours {
     display: flex;
     background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
     align-items: center;
   }
 
-  .weekDays span {
+  .nextHours span {
     display: block;
     line-height: 35px;
     font-size: 2.5vw;
     padding: 8px;
+  }
+}
+
+@media (max-width: 1025px) and (orientation: landscape) {
+  .nextHours {
+    display: none;
   }
 }

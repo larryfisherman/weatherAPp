@@ -33,7 +33,7 @@ h1.active {
   position: absolute;
   margin: 15px;
   top: 2%;
-  left: 6%;
+  left: 8%;
   font-size: 4vh;
   transform: translate(-50%, 0);
   color: rgba(255, 255, 255, 0.4);
@@ -148,6 +148,24 @@ h1.unActive {
     font-size: 10vw;
     white-space: nowrap;
     color: rgba(255, 255, 255, 0.5);
+  }
+  h1.active {
+    display: none;
+  }
+}
+
+@media (max-width: 1025px) and (orientation: landscape) {
+  h1.unActive {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 10vw;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  h1.active {
+    display: none;
   }
 }
 

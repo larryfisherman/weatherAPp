@@ -71,3 +71,19 @@ p {
     font-size: 3vw;
   }
 }
+
+@media (max-width: 1025px) and (orientation: landscape) {
+  .additionalInfo {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 55%;
+    align-items: center;
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  p {
+    white-space: nowrap;
+    font-size: 2vw;
+  }
+}

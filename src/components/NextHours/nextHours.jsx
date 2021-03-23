@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./WeekDays.css";
+import "./nextHours.css";
 import { Icons } from "../../icons";
 import moment from "moment";
 
-const WeekDays = ({ nextHours }) => {
+const NextHours = ({ nextHours }) => {
   const isApiLoaded = useSelector((state) => state.weather.isApiLoaded);
   const data = useSelector((state) => state.weather.fiveDaysWeatherData);
   if (isApiLoaded) {
@@ -21,7 +21,7 @@ const WeekDays = ({ nextHours }) => {
     );
     const nineHoursSky = data.list[6].weather[0].main;
     return (
-      <div className="weekDays">
+      <div className="nextHours">
         <div className="one">
           <img src={Icons[threeHoursSky]} alt={Icons[threeHoursSky]} />
           <span>{threeHoursTemp} °C</span>
@@ -54,4 +54,4 @@ const WeekDays = ({ nextHours }) => {
   }
 };
 
-export default WeekDays;
+export default NextHours;
