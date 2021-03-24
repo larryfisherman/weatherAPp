@@ -5,7 +5,9 @@ const Popup = (props) => {
   return props.trigger ? (
     <div className="popup">
       <div className="popup-inner">
-        <button className="close-btn">Close</button>
+        <h3>Oops!</h3>
+        <p>You forgot to pass the city or the city doesn't exist!</p>
+        <button className="close-btn">Okay</button>
       </div>
     </div>
   ) : (

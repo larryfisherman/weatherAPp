@@ -12,6 +12,7 @@ const WeatherBox = () => {
     const temp = Math.floor(data.main.temp);
     const sky = data.weather[0].main;
     const country = data.sys.country;
+    console.log(isApiLoaded);
     return (
       <div className="locationDate">
         <img src={Icons[sky]} alt={[sky]} />

@@ -5,18 +5,20 @@ import { getWeather } from "../../store/actions/weatherActions";
 
 const SearchingBar = ({ shareToggleClass, togglePopupStatus }) => {
   const dispatch = useDispatch();
+  const isApiLoaded = useSelector((state) => state.weather.isApiLoaded);
   const [toggleClass, setToggleClass] = useState(false);
   const [query, setQuery] = useState("");
 
   const search = (event) => {
     if (event.key === "Enter") {
+      dispatch(getWeather(query));
       if (query) {
-        dispatch(getWeather(query));
         setToggleClass(true);
         shareToggleClass({ toggleClass });
       } else {
         togglePopupStatus(true);
       }
+      console.log(isApiLoaded);
     }
   };
   return (

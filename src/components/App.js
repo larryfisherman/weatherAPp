@@ -17,8 +17,6 @@ const App = () => {
   const togglePopupStatus = (res) => {
     setTogglePopup(res);
   };
-
-  console.log(toggleClass);
   return (
     <div className={toggleClass ? "activeApp" : "unActiveApp"}>
       <div className={toggleClass ? "activeHeader" : "unActiveHeader"}>
