@@ -3,21 +3,19 @@ import "./SearchingBar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getWeather } from "../../store/actions/weatherActions";
 
-const SearchingBar = ({ shareToggleClass }) => {
+const SearchingBar = ({ shareToggleClass, togglePopupStatus }) => {
   const dispatch = useDispatch();
   const [toggleClass, setToggleClass] = useState(false);
   const [query, setQuery] = useState("");
 
-  const isApiLoaded = useSelector((state) => state.weather.isApiLoaded);
-
   const search = (event) => {
     if (event.key === "Enter") {
-      dispatch(getWeather(query));
-      if (isApiLoaded) {
+      if (query) {
+        dispatch(getWeather(query));
         setToggleClass(true);
         shareToggleClass({ toggleClass });
       } else {
-        return;
+        togglePopupStatus(true);
       }
     }
   };

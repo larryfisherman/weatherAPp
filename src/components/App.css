@@ -115,7 +115,7 @@ h1.unActive {
     height: 100%;
     justify-content: space-around;
     align-items: center;
-    animation: show 2s linear;
+    animation: show 3s linear;
     animation-iteration-count: 1;
     opacity: 1;
   }
@@ -180,5 +180,22 @@ h1.unActive {
 
   100% {
     top: 10%;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  42% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
