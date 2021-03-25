@@ -4,34 +4,25 @@ import SearchingBar from "./SearchingBar/SearchingBar";
 import WeatherBox from "./WeatherBox/WeatherBox";
 import NextHours from "./NextHours/nextHours";
 import AdditionalInfo from "./AdditionalInfo/AdditionalInfo";
-import Popup from "./Popup/Popup";
 
 const App = () => {
   const [toggleClass, setToggleClass] = useState(false);
-  const [togglePopup, setTogglePopup] = useState(false);
 
   const shareToggleClass = (res) => {
     setToggleClass(res);
   };
 
-  const togglePopupStatus = (res) => {
-    setTogglePopup(res);
-  };
   return (
     <div className={toggleClass ? "activeApp" : "unActiveApp"}>
       <div className={toggleClass ? "activeHeader" : "unActiveHeader"}>
         <h1 className={toggleClass ? "active" : "unActive"}> Weather App </h1>
-        <SearchingBar
-          shareToggleClass={shareToggleClass}
-          togglePopupStatus={togglePopupStatus}
-        />
+        <SearchingBar shareToggleClass={shareToggleClass} />
       </div>
       <div className={toggleClass ? "activeMain" : "unActiveMain"}>
         <WeatherBox />
         <AdditionalInfo shareToggleClass={shareToggleClass} />
         <NextHours />
       </div>
-      <Popup trigger={togglePopup} />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import "./WeatherBox.css";
 import { Icons } from "../../icons";
 import moment from "moment";
 
-const WeatherBox = () => {
+const WeatherBox = ({}) => {
   const isApiLoaded = useSelector((state) => state.weather.isApiLoaded);
   const data = useSelector((state) => state.weather.currentWeatherData);
 
@@ -12,7 +12,6 @@ const WeatherBox = () => {
     const temp = Math.floor(data.main.temp);
     const sky = data.weather[0].main;
     const country = data.sys.country;
-    console.log(isApiLoaded);
     return (
       <div className="locationDate">
         <img src={Icons[sky]} alt={[sky]} />

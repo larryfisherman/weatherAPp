@@ -43,8 +43,16 @@ input:focus {
   background-color: rgba(255, 255, 255, 1);
 }
 
-p {
-  line-height: 35px;
+.apiTrobuleActive {
+  position: absolute;
+  width: 50%;
+  top: 45%;
+  left: 38%;
+  font-size: 1vw;
+}
+
+.apiTrobuleUnactive {
+  display: none;
 }
 
 @media (max-width: 1025px) {
@@ -68,7 +76,7 @@ p {
   input.Active {
     display: flex;
     position: absolute;
-    top: 5%;
+    top: 10%;
     width: 80%;
     height: 6%;
     justify-self: center;
@@ -91,6 +99,18 @@ p {
 
   input:focus {
     background-color: rgba(255, 255, 255, 1);
+  }
+
+  .apiTrobuleActive {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    font-size: 2vw;
+  }
+
+  .apiTrobuleUnactive {
+    display: none;
   }
 }
 
@@ -138,6 +158,18 @@ p {
 
   input:focus {
     background-color: rgba(255, 255, 255, 1);
+  }
+
+  .apiTrobuleActive {
+    position: absolute;
+    width: 50%;
+    top: 75%;
+    left: 38%;
+    font-size: 1vw;
+  }
+
+  .apiTrobuleUnactive {
+    display: none;
   }
 }
 

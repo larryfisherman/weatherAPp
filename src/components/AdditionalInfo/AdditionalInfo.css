@@ -12,6 +12,7 @@
 p {
   white-space: nowrap;
   font-size: 1.5vw;
+  line-height: 35px;
 }
 
 .additionalInfo .maxTemp {
